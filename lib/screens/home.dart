@@ -131,13 +131,16 @@ class _HomeState extends State<Home> {
       print('ss');
       print(position);
       print('ser');
-      latitude = position.latitude.toString();
-      longitude = position.longitude.toString();
 
-      setState(() {});
+
+      setState(() {
+        latitude = position.latitude.toString();
+        longitude = position.longitude.toString();
+      });
     } catch (e) {
-      location = "Error fetching location";
-      setState(() {});
+      location = "Error fetching location: $e";
+      setState(() {
+      });
     }
   }
 
